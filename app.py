@@ -6,11 +6,17 @@ car_data = pd.read_csv('vehicles.csv')  # lendo os dados
 fig = px.histogram(car_data, x="odometer")  # criar um histograma
 fig.show()  # exibindo
 
+car_data = pd.read_csv('vehicles.csv')  # lendo os dados
 # criar um gráfico de dispersão
 fig = px.scatter(car_data, x="odometer", y="price")
 fig.show()  # exibindo
 
-car_data = pd.read_csv('vehicles.csv')  # lendo os dados
+st.write('Análise Exploratória de Dados')
+st.write(
+    'Este aplicativo realiza uma análise exploratória de dados no conjunto de dados de anúncios de vendas de carros.')
+
+st.dataframe(car_data, height=600)  # exibir o dataframe
+
 hist_button = st.button('Criar histograma')  # criar um botão
 
 if hist_button:  # se o botão for clicado
