@@ -6,7 +6,6 @@ car_data = pd.read_csv('vehicles.csv')  # lendo os dados
 fig = px.histogram(car_data, x="odometer")  # criar um histograma
 fig.show()  # exibindo
 
-car_data = pd.read_csv('vehicles.csv')  # lendo os dados
 # criar um gráfico de dispersão
 fig = px.scatter(car_data, x="odometer", y="price")
 fig.show()  # exibindo
